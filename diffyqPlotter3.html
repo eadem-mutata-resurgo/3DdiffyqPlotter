@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>3D DiffyQ Plotter</title>
+  </head>
+
+  <body>
+    <div style="text-align: center;">
+
+      
+      <canvas id="canvas" 
+        width="500" height="500"
+        style="border:1px solid #000;">
+      </canvas>
+      </br>
+      Camera angle:
+      <input id="angleSlider" type="range" min="0" max="360" value="295" step="0.1" />
+      Auto:
+      <input id="autoSwitch" type="checkbox"/>
+      </br>
+      Camera height:
+      <input id="heightSlider" type="range" min="-0.1" max="0.1" value="0.01" step="0.0001" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </br>  
+      <input  id="startButton" type="button" value="Start"/>
+      <input  id="resetButton" type="button" value="Reset"/>
+      </br>
+      Draw axes:
+      <input id="axSwitch" type="checkbox"/>
+      Draw grid lines:
+      <input id="gridSwitch" type="checkbox"/>
+      </br>
+
+      &#x1e8b;
+      <input  id="xDot" type="text" value = "10*(y-x)" size="30">
+      x<sub>0</sub>
+      <input  id="xInit" type="number" value = "1" step = "0.1" style="width: 50px">
+      </br>
+      &#x1e8f;
+      <input  id="yDot" type="text" value = "28*x-x*z-y" size="30">
+      y<sub>0</sub>
+      <input  id="yInit" type="number" value = "1" step = "0.1" style="width: 50px">
+      </br>
+      &#x017c;
+      <input  id="zDot" type="text" value = "x*y-(8/3)*z" size="30">
+      z<sub>0</sub>
+      <input  id="zInit" type="number" value = "25" step = "0.1" style="width: 50px">
+      </br>
+
+
+      Speed:
+      <input  id="speed" type="number" value = "25" step = "1" style="width: 50px">
+      &nbsp;&nbsp;&nbsp;&nbsp;dt:
+      <input  id="dt" type="number" value = "0.001" step = "0.0001" style="width: 50px">
+      &nbsp;&nbsp;&nbsp;&nbsp;Tail length:
+      <input  id="tMax" type="number" value = "100000" step = "1" style="width: 75px">
+      </br>
+      Line width:
+      <input  id="lineWidth" type="number" value = "1" step = "0.1"  min="0.1" style="width: 50px">
+      &nbsp;&nbsp;&nbsp;&nbsp;origin:
+      <input  id="xOrigin" type="number" value = "0" step = "1"style="width: 50px">
+      <input  id="yOrigin" type="number" value = "0" step = "1"style="width: 50px">
+      <input  id="zOrigin" type="number" value = "25" step = "1"style="width: 50px">
+      </br>
+      Color:
+      <input  id="red" type="number" value = "255" step = "1" min = "0" max = "255" style="width: 50px">
+      <input  id="green" type="number" value = "100" step = "1" min = "0" max = "255" style="width: 50px">
+      <input  id="blue" type="number" value = "0" step = "1" min = "0" max = "255" style="width: 50px">
+
+      <script src="diffyqPlotter3.js" id="module"></script>
+      <script type="text/javascript" src="gl-matrix-min.js"></script>
+
+    </div>
+  </body>
+  
+</html>
